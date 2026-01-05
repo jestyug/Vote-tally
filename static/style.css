@@ -20,15 +20,33 @@ body {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 500px;
+    
 }
 
 h1 {
-    color: #333;
+    color: #f50f0f;
     margin-bottom: 1rem;
     font-size: 2.5rem;
 }
 
 p {
-    color: #666;
-    font-size: 1.1rem;
+    color: #4d05f5;
+    font-size: 0.7rem;
+    font-family: arial;
+    
+}
+
+h5 {
+    color: #f73302;
+    font-size: 0.5rem;
+    font-family: arial;
+
+}
+hr{
+    border: none; /* Removes the default border */
+    height: 2px; /* Sets the thickness of the line */
+    background-color: red; /* Changes the line color */
+    width: 100%; /* Adjusts the width of the line */
+    margin: 2px auto; /* Centers the line with spacing */
+    
 }
