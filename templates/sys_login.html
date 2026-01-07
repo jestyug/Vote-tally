@@ -2,6 +2,27 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+      .button-class {
+          background-color: #4d05f5;
+          /* Green */
+          border: none;
+          color: white;
+          padding: 1px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 13px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 5px;
+      }
+  </style>
+
+
+
+  
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -17,7 +38,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: #4d05f5;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -51,7 +72,17 @@ img.avatar {
 
 .container {
   padding: 16px;
+  border-radius: 12px;
+  
+  
 }
+  .center {
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center; /* Vertical alignment */
+  height: 80vh; /* Full viewport height */
+  border: 0px solid blue;
+  }
 
 span.psw {
   float: right;
@@ -126,20 +157,23 @@ span.psw {
 </style>
 </head>
 <body>
-
-<h2>Modal Login Form</h2>
+ <div class="container">
+<h2>Welcome:<br> VOTE TALLY<br> System</h2>
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
+<h5>All Rights Reserved by the Indepent Observer Group</h5>
+</div>
 <div id="id01" class="modal">
 
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+       title="Close Modal">&times;</span>
+      <img src="ugflag.jpg" class="avatar">
     </div>
 
-    <div class="container">
+    <div class="center">
+      <div class = "container">
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -150,11 +184,20 @@ span.psw {
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
-    </div>
+        <button type="button"                            onclick="document.getElementById('id01').style.display='none'" 
+          class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        <!--<a href="{{url_for('displayresults')}}" class="button-class">" -->
+        <a href="{{url_for('displayresults')}}" class="button-class">LOGIN</a>
+      </div>
+      </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+  <!--  <div class="container" style="background-color:#f1f1f1">
+      <a href="{{url_for('entries')}}" class="button-class">LOGIN</a>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" 
+      class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
+   -->
     </div>
   </form>
 </div>
