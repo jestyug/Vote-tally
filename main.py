@@ -8,12 +8,23 @@ RESULTS = [{
     'post': 'Memmber of parliament',
     'area': 'Busiro East Constituency',
     'totalresult': 37729
-}, {
+}, 
+    {
     'name': 'Sempala kigozi',
     'post': 'Memmber of parliament',
     'area': 'Busiro East Constituency',
     'totalresult': 34345
-}, {
+}, 
+            {
+               'name': 'Kamadi',
+               'post': 'Memmber of parliament',
+               'area': 'Busiro East Constituency',
+               'totalresult': 34445
+           }, 
+
+
+           
+           {
     'name': 'Haji Abdul Kiyimba',
     'post': 'Memmber of parliament',
     'area': 'Busiro East Constituency',
