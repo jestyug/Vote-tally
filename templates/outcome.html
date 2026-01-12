@@ -1,0 +1,9 @@
+<div padding-bottom:4px>
+<div><hr><h2> Name:{{resultsdata['name']}} </h3><hr></div>
+<div><h3> Post:{{resultsdata['post']}} </h4></div>
+<div><h4 style="color:rgd(120,120,120)">Constituency:{{resultsdata['area']}} </h5></div>
+{% if 'totalresult' in resultsdata %}
+<div><h4> Current Total Result:{{resultsdata['totalresult']}} </h4></div>
+{% endif %}
+<button type="submit" href="/">View Details</button>
+</div>

@@ -1,45 +1,38 @@
-<!-- As a link -->
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-black align-items-right">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">VOTE-TALLY</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{url_for('login')}}"">Loggoff</a>
+          <a class="nav-link active" aria-current="page"href="{{url_for('index')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url_for('results')}}"><b>Add Results</a>
-          <a class="nav-link" href="#"><b>System Configuration</a>
-            <ul>
-              <li><a class="nav-link" href="{{url_for('entries')}}">Add Distict</a></li>
-              <li><a class="nav-link" href="{{url_for('constituency')}}">Add Constituencies</a></li>
-              <li><a class="nav-link" href="{{url_for('subcounty')}}">Add Subcounties</a></li>
-              <li><a class="nav-link" href="{{url_for('parish')}}">Add Parishes</a></li>
-              <li><a class="nav-link" href="{{url_for('pollingstation')}}"')}}">Add Polling Stations</a></li>
-              <li><a class="nav-link" href="{{url_for('post')}}">Add Post</a></li>
-              <li><a class="nav-link" href="{{url_for('candidates')}}">Add Candidates</a></li>
-              <li><a class="nav-link" href="{{url_for('linkcandpost')}}">Link Candidates to Posts</a></li>
-            </ul>
+          <a class="nav-link" href="{{url_for('results2')}}">Results</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Users</a>
+          <a class="nav-link" href="#">Analysis</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            System Administration
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Add New User </a></li>
+            <li><a class="dropdown-item" href="{{url_for('entries')}}">Add Distict</a></li>
+            <li><a class="dropdown-item" href="{{url_for('constituency')}}">Add Constituency</a></li>
+           <li><a class="dropdown-item" href="{{url_for('subcounty')}}">Add Sub-county</a></li>
+            <li><a class="dropdown-item" href="{{url_for('parish')}}">Add Parishes</a></li>
+            <li><a class="dropdown-item" href="{{url_for('pollingstation')}}">Add pollingstation</a></li>
+           <li><a class="dropdown-item" href="{{url_for('post')}}">Add Post</a></li>
+            <li><a class="dropdown-item" href="{{url_for('candidates')}}">Add Candidates</a></li>
+            <li><a class="dropdown-item" href="{{url_for('linkcandpost')}}">Link candidates to post</a></li>
+      
+          </ul>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<div style='height:56px'></div>
-<!-- 
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">Navbar</span>
-  </div>
-</nav>
-As a heading -->
-

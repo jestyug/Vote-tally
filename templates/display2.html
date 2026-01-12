@@ -32,7 +32,14 @@
       padding: 10px 0;
       font-size: 32px;
       font-weight: 300;
-      text-align: center;
+      color: white;           /* Text color */
+      font-family: Arial, sans-serif; /* Font style */
+      font-size: 36px;           /* Font size */
+      text-align: left;        /* Center align text */
+      background-color: red; /* Background color */
+      padding: 10px;             /* Space inside the box */
+      border-radius: 8px;        /* Rounded corners */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Shadow effect */
       }
       p {
       font-size: 12px;
@@ -130,55 +137,75 @@
       margin: 10px auto;
       border-radius: 5px; 
       border: none;
-      background: #1c87c9; 
+      background: red; 
       font-size: 14px;
       font-weight: 600;
-      color: #fff;
+      color: white;
+        /*color: #fff;*/
       }
       button:hover {
       background: #26a9e0;
       }
+
+      row {
+      display: flex;
+      }
+      column {
+      flex: 50%;
+      }
+      column {
+      float: left;
+      width: 50%;
+      }
+
+      grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      }
+      grid-item {
+      padding: 20px;
+      }
+
+      
     </style>
 
 
   </head>
   <body>
-    {%include 'navii.html'%}
+    {%include 'navii.html'%}<br><br>
     <div class="main-block">
-      <h1>RESULTS</h1>
+      <h1>Display of Results</h1>
       <form action="/">
-
-        <div class="account-type">
+        <div class="container2">
           <div class="btn-block">
-            <p>Capture Results at Polling Station </a>.</p>
-          </div>
+       <p>Results detail</a>.</p>
+       
+          <div style="margin: buttom;162px;">
+             <h1><b>2026 Elections Provisional Results details.</h1>
+          {% for resultsdata in resultsdata %}
+            {%include 'outcome.html'%}
+              
+            {% endfor %}
+            <hr>
 
-        <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-        <input type="text" name="distid" id="distid" placeholder="District Code" required/>
-        <label id="icon" for="name"><i class="fas fa-user"></i></label>
-        <input type="text" name="dist" id="dist" placeholder="Constituency Code" required/>
-        <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-        <input type="text" name="cordinate" id="cordinate" placeholder="Subcounty Code" />
-
-          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-          <input type="text" name="cordinate" id="cordinate" placeholder="Parish Code" />
-
-          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-          <input type="text" name="cordinate" id="cordinate" placeholder="Polling Stations Code" />
-
-          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-          <input type="text" name="cordinate" id="cordinate" placeholder="Candidate Code" />
-
-          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-          <input type="text" name="cordinate" id="cordinate" placeholder="Results Code" />
+            
+<p> 
+ 
+</p>
+        
 
         <div class="btn-block">
-          <p>Use the Declaration Form by Electral Commission</a>.</p>
-          <button type="submit" href="/">Submit</button>
+          <p>Contact System Administrator for Inquiries</a>.</p>
+          
         </div>
       </form>
     </div>
-   
+
   </body>
   {%include 'footer.html'%}
 </html>
+
+
+
+            

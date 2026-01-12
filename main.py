@@ -1,7 +1,24 @@
-from flask import Flask, render_template
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 app.secret_key = 'dev-secret-key'
+
+RESULTS = [{
+    'name': 'Lubega_Medard_Sseggona',
+    'post': 'Memmber of parliament',
+    'area': 'Busiro East Constituency',
+    'totalresult': 37729
+}, {
+    'name': 'Sempala kigozi',
+    'post': 'Memmber of parliament',
+    'area': 'Busiro East Constituency',
+    'totalresult': 34345
+}, {
+    'name': 'Haji Abdul Kiyimba',
+    'post': 'Memmber of parliament',
+    'area': 'Busiro East Constituency',
+    'totalresult': 8989
+}]
 
 
 @app.route('/')
@@ -61,12 +78,22 @@ def pollingstation():
 
 @app.route('/results')
 def results():
-    return render_template('results.html')
+    return render_template('results.html', resultsdata=RESULTS)
+
+
+@app.route('/results2')
+def results2():
+    return render_template('display2.html', resultsdata=RESULTS)
 
 
 @app.route('/displayresults')
 def displayresults():
     return render_template('displayresults.html')
+
+
+@app.route('/resultsapi')
+def resultsapi():
+    return jsonify(RESULTS)
 
 
 if __name__ == '__main__':
