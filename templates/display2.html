@@ -183,10 +183,9 @@
        
           <div style="margin: buttom;162px;">
              <h1><b>2026 Elections Provisional Results details.</h1>
-          {% for resultsdata in resultsdata %}
-            {%include 'outcome.html'%}
-              
-            {% endfor %}
+              {% for resultsdata in resultsdata %}
+                {%include 'outcome.html'%}
+              {% endfor %}
             <hr>
 
             
