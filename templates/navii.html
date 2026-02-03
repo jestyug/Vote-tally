@@ -12,12 +12,20 @@
         <li class="nav-item">
           <a class="nav-link" href="{{url_for('results')}}">Add Results</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('results2')}}">View Results</a>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Reports
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Jobs Created </a></li>
+            <li><a class="dropdown-item" href="{{url_for('entries')}}">Groups Formed</a></li>
+            <li><a class="dropdown-item" href="{{url_for('constituency')}}">Assistive Devices Given</a></li>
+           
+
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Analysis</a>
-        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             System Administration
@@ -28,10 +36,10 @@
             <li><a class="dropdown-item" href="{{url_for('constituency')}}">Add Constituency</a></li>
            <li><a class="dropdown-item" href="{{url_for('subcounty')}}">Add Sub-county</a></li>
             <li><a class="dropdown-item" href="{{url_for('parish')}}">Add Parishes</a></li>
-            <li><a class="dropdown-item" href="{{url_for('pollingstation')}}">Add pollingstation</a></li>
-           <li><a class="dropdown-item" href="{{url_for('post')}}">Add Post</a></li>
-            <li><a class="dropdown-item" href="{{url_for('candidates')}}">Add Candidates</a></li>
-            <li><a class="dropdown-item" href="{{url_for('linkcandpost')}}">Link candidates to post</a></li>
+            <li><a class="dropdown-item" href="{{url_for('pollingstation')}}">Add Villages</a></li>
+           <li><a class="dropdown-item" href="{{url_for('post')}}">Add Groups/Organisations</a></li>
+            <li><a class="dropdown-item" href="{{url_for('candidates')}}">Add Enterprises</a></li>
+            <li><a class="dropdown-item" href="{{url_for('linkcandpost')}}">Add Tittles</a></li>
       
           </ul>
         </li>
